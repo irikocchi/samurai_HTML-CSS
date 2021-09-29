@@ -1,4 +1,20 @@
 @charset "utf-8";
 
-.jumbotron{background: url() center no-repeat; background-color: gainsboro; background-size: cover;}
-.h1{font-weight: 800;}
+.jumbotron{
+    background: url(https://picsum.photos/1500/800) center no-repeat;
+    background-color: ; 
+    background-size: cover;
+}
+
+.h1{
+    font-weight: 800;
+   }
+
+.container02{
+    width: 1170px;
+    
+    padding: 0 15px;
+    margin: 0 auto;
+    background: url(https://picsum.photos/1500/800)center no-repeat; 
+    background-size: cover;
+}
