@@ -2,7 +2,7 @@
 
 .jumbotron{
     background: url(https://picsum.photos/1500/800) center no-repeat;
-    background-color: ; 
+    background-color: white; 
     background-size: cover;
 }
 
@@ -18,3 +18,14 @@
     background: url(https://picsum.photos/1500/800)center no-repeat; 
     background-size: cover;
 }
+  
+a.no-color-change:link,
+a.no-color-change:visited,
+a.no-color-change:hover,
+a.no-color-change:active {
+  color: black;
+  text-decoration: none;
+  }
+ .container02{
+    text-align:center
+ }
