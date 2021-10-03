@@ -64,18 +64,18 @@ const keyDown = e => {
     }
 }; // キーイベント＆入力判定処理
 
-const rankCheck = score => {// ランク判定とメッセージ生成処理
+const rankCheck = score => { // ランク判定とメッセージ生成処理
 //スコアの値を返す
 return '${score}文字打てました！';
 
 }; 
 
-const gameOver = id => {// ゲームの終了処理
+const gameOver = id => {
     //タイマーをストップする
     clearInterval(id);
 
     //スコアの値をrankCheck()に渡してダイアログで結果を表示する
-    const result = confirm(rankCheck(score));
+    const result = confirm(rankcheck(score));
 
 }; 
 
