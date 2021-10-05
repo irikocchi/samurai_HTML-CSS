@@ -74,20 +74,19 @@ const gameOver = id => {               //タイマーをストップする
                                  
     clearInterval(id);
     
-    
-    const result = confirm(rankCheck(score));  //スコアの値をrankCheck()に渡してダイアログで結果を表示する
+    const result = confirm(rankCheck(score));    // スコアの値をrankCheck()に渡してダイアログで結果を表示する
 }; 
 
 const timer = () => {// タイマー処理
     
-    let time = 2;                           //③タイマーの初期値を設定(60秒）
+    let time = 5;                           //③タイマーの初期値を設定(60秒）
     
     const count = document.getElementById('count');         //①タイマー要素を取得する
     const id = setInterval(() =>{
 
         //カウントが0になったらタイマーを停止する→0になったらタイマーのIDをgameOver()に渡す
        // if(time <= 0)clearInterval(id);→下のコードに変更
-       if(time <=0)clearInterval(id);
+       if(time <= 0) gameOver(id)
 
        
         count.textContent = time--; //④タイマーの表示を1ずつ減らしていく
