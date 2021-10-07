@@ -50,7 +50,6 @@ let score =0;//スコアの初期値を設定する
 const keyDown = e => {
     if(e.key === checkTexts[0].textContent){
 
-
     checkTexts[0].className = 'add-color';// add-colorクラスを付与する
 
    
@@ -61,13 +60,34 @@ const keyDown = e => {
 
     
     if(!checkTexts.length)createText();//最後まで入力したら新しいテキストを用意する
+
+        //shiftキーを押した時は色が変わらない
+    }else if (e.key === 'shift'){
+        wrap.style.backgroundColor = '#666';
+        //タイプミスした時だけ背景色を赤色に変える
+    }else {
+        wrap.style.backgroundColor = 'red'
     }
+    
 }; // キーイベント＆入力判定処理
 
 const rankCheck = score => { // ランク判定とメッセージ生成処理
+    
+        //テキストを格納する変数を作る
+        let text= '';
 
-return '${score}文字打てました！';//スコアの値を返す
-
+        //スコアに応じて異なるメッセージを変数textに格納する
+        if(score < 100){
+            text=`あなたのランクはCです。\nBランクまであと${100-score}文字です。`;
+        }else if(score < 200){
+            text=`あなたのランクはBです。\nAランクまであと${200-score}文字です。`
+        }else if(score < 300){
+            text=`あなたのランクはAです。\nSランクまであと${300-score}文字です。`
+        }else if(score >= 300){
+            text=`あなたのランクはSです。\nおめでとうございます！`;
+        }
+        //生成したメッセージと一緒に文字列を返す
+        return `${score}文字打てました！\n${text}\n【OK】リトライ／【キャンセル】終了`;
 }; 
 
 const gameOver = id => {               //タイマーをストップする
@@ -75,6 +95,9 @@ const gameOver = id => {               //タイマーをストップする
     clearInterval(id);
     
     const result = confirm(rankCheck(score));    // スコアの値をrankCheck()に渡してダイアログで結果を表示する
+
+    // OKボタンをクリックされたらリロードする
+    if(result) window.location.reload();
 }; 
 
 const timer = () => {// タイマー処理
