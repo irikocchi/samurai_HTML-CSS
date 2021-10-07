@@ -102,7 +102,7 @@ const gameOver = id => {               //タイマーをストップする
 
 const timer = () => {// タイマー処理
     
-    let time = 5;                           //③タイマーの初期値を設定(60秒）
+    let time = 60;                           //③タイマーの初期値を設定(60秒）
     
     const count = document.getElementById('count');         //①タイマー要素を取得する
     const id = setInterval(() =>{
