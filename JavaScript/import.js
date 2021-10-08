@@ -1,8 +1,11 @@
 // 必要なHTML要素の取得
-const wrap = document.getElementById('wrap');
-const start = document.getElementById('start');
+//const wrap = document.getElementById('wrap');
+$('#wrap');
 
-const textLists = [ // 複数のテキストを格納する配列
+//const start = document.getElementById('start');
+$('#start');
+//const textLists = []// 複数のテキストを格納する配列
+const textLists = [ 
     'Hello World','This is my App','How are you?',
     'Today is sunny','I love JavaScript!','Good morning',
     'I am Japanese','Let it be','Samurai',
@@ -48,6 +51,9 @@ createText();// createText関数を実行する
 let score =0;//スコアの初期値を設定する
 
 const keyDown = e => {
+     // 背景色のデフォルト値を設定する
+    wrap.style.backgroundColor = '#666';
+
     if(e.key === checkTexts[0].textContent){
 
     checkTexts[0].className = 'add-color';// add-colorクラスを付与する
