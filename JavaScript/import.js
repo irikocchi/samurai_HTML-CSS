@@ -23,7 +23,8 @@ const textLists = [
 let checkTexts = [];
 
 const createText = () => { // ランダムなテキストを画面に表示する
-const p = document.getElementById('text');
+    const p = document.getElementById('text');
+    //$('#text');
 
     const rnd = Math.floor(Math.random()*textLists.length);//配列のインデックス数からランダムな数値を生成する
 
