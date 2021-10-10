@@ -6,33 +6,24 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>電卓</title>
-    <!--  CDNでBootstrapの読み込み  -->
-    <!--  Bootstrapはjも必要です  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!--  Bootstrapの動作に必要なので、jQueryも読み込まれます。
-     　　　公式サイトに則ると「slim」版になりますが、full版で問題ないので通常版に変えています。-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-    <!--  自作の  -->
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <script src="main.js"></script>
 </head>
 <body>
     <main class="container">
-        <!--<div class="col-md-4 col-sm-4 col-xs-4"></div>
-        <div class="col-md-8 col-sm-8 col-xs-8">-->
             <h1>電卓</h1>
-            
 
-            <!--<div class="row align-items-center">-->
-                <div class="input-group">
                     <div class="col bg-info p-3 text-right" id="total_display" style="font-size: 1.5em"></div>
-                </div>
                 <div class="button_area">
                     <div class="row mt-2">
-                        <div class="col"><button class="btn btn-outline-dark btn-block btn_suuji"id="btn_7">7</button></div>
+                        <div class="col">
+                            <button class="btn btn-outline-dark btn-block btn_suuji"id="btn_7">7</button>
+                        </div>
                         <div class="col"><button class="btn btn-outline-dark btn-block btn_suuji"id="btn_8">8</button></div>
                         <div class="col"><button class="btn btn-outline-dark btn-block btn_suuji"id="btn_9">9</button></div>
                         <div class="col"><button class="btn btn-outline-dark btn-block btn_suuji"id="btn_waru">÷</button></div>
