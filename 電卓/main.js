@@ -10,5 +10,7 @@ $(function () {
 });
 
 function DisplayInput(num) {
+    //document.getElementById("total_display")
   $("#total_display").text($("#total_display").text() + num);
 }
+//$("#total_display").text(num);の後ろに$("#total_display").text() を付ける
