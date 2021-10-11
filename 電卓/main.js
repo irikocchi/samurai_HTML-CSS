@@ -1,7 +1,6 @@
 $(function(){
-    $('#btn_1').on('click',function(){
-        DisplayInput(1);
-        //$("p");
+    $('.btn_suuji').on('click',function(){
+        DisplayInput('1');
     })
 
 
